@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         web_home.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         web_home.setScrollbarFadingEnabled(false);
         web_home.setWebViewClient(new WebViewClient());
-        web_home.loadUrl("https://tvally.in/");
+        //web_home.loadUrl("https://tvally.in/");
+        web_home.loadUrl("https://www.amazon.in/");
 
         web_home.setWebViewClient(new WebViewClient() {
 
