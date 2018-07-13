@@ -37,7 +37,6 @@ public class SplashScreenActivity extends AppCompatActivity {
         finish();
     }
 
-
     private void openScreens() {
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -49,6 +48,4 @@ public class SplashScreenActivity extends AppCompatActivity {
             }
         }, SPLASH_TIME_OUT);
     }
-
-
 }

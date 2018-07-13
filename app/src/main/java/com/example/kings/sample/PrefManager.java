@@ -1,17 +1,19 @@
 package com.example.kings.sample;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 
 public class PrefManager {
-    SharedPreferences pref;
-    SharedPreferences.Editor editor;
-    Context _context;
-    int PRIVATE_MODE = 0;
+    private SharedPreferences pref;
+    private SharedPreferences.Editor editor;
+    private Context _context;
+    private int PRIVATE_MODE = 0;
 
-    private static final String PREF_NAME = "GoFarmz";
+    private static final String PREF_NAME = "Tvally";
     private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
 
+    @SuppressLint("CommitPrefEdits")
     public PrefManager(Context context) {
         this._context = context;
         pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
