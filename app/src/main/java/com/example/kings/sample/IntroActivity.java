@@ -19,7 +19,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class GetStartedActivity extends AppCompatActivity {
+public class IntroActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private LinearLayout dotsLayout;
@@ -31,15 +31,15 @@ public class GetStartedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_get_started);
+        setContentView(R.layout.activity_intro);
 
         sessionManager = new UserSessionManager(getApplicationContext());
 
-        prefManager = new PrefManager(this);
+        /*prefManager = new PrefManager(this);
         if (!prefManager.isFirstTimeLaunch()) {
             launchHomeScreen();
             finish();
-        }
+        }*/
 
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
@@ -110,9 +110,9 @@ public class GetStartedActivity extends AppCompatActivity {
     }
 
     private void launchHomeScreen() {
-        sessionManager.createIsFirstTimeAppLunch();
-        prefManager.setFirstTimeLaunch(false);
-        Intent intent = new Intent(GetStartedActivity.this, SplashScreenActivity.class);
+        //sessionManager.createIsFirstTimeAppLunch();
+        //prefManager.setFirstTimeLaunch(false);
+        Intent intent = new Intent(IntroActivity.this, SplashScreenActivity.class);
         startActivity(intent);
         finish();
     }
