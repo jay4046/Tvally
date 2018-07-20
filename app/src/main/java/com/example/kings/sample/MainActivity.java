@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    public static void deleteCache(Context context) {
+    /*public static void deleteCache(Context context) {
         try {
             File dir = context.getCacheDir();
             deleteDir(dir);
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             return false;
         }
-    }
+    }*/
 
     @Override
     public void onBackPressed() {
